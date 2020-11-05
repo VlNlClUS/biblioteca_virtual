@@ -1,6 +1,8 @@
 
 #define X 100
 
+
+
 typedef struct
 {
   
@@ -16,9 +18,13 @@ typedef struct
 {
     LIVRO A[X];
     int nro_elem;
+	int prox;
 } ACERVO;
+
+ ACERVO livros;
 
 // int ordena_elemento(ACERVO *livros, LIVRO *titulo, LIVRO *subtitulo, LIVRO *autoria, LIVRO *imprenta);
 void cadastro_livro(ACERVO *livros);
-void inicalizarLLS(ACERVO *livros);
+void inicalizar(ACERVO *livros);
 void mostra_todos(ACERVO *livros);
+int busca_binaria(ACERVO *livros, int ch);
