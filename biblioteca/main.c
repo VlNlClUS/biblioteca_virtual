@@ -57,7 +57,7 @@ do {
 switch (opcao1){
 
 case 1:
-         printf(" Digite o numero do ID desejado para consulta:\n");
+         printf(" Digite o numero do ID desejado para consulta:");
             scanf("%d", &p);
             tmp =  busca_binaria(&livros, p);
             if (tmp == -1)
@@ -67,7 +67,8 @@ case 1:
             }
             else
             {
-                printf("posicao do valor %d na Lista = %d \n", p, tmp);
+                printf("\nposicao do valor %d na lista = %d \n", p, tmp);
+                mostra_livro(&livros,tmp);
                   getchar();
             }
             printf("Digite <enter> para voltar");

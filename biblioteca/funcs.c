@@ -11,53 +11,36 @@
 void inicalizar(ACERVO *livros)
 {
     
-    livros->nro_elem= 1;
-    livros->prox= 1;
+    livros->nro_elem= 0;
+    livros->count_id= 0;
 }
 
 //CAPTURA AS INFORMACOES DO ELEMENTO A SER ADICIONADO
 
 void cadastro_livro(ACERVO *livros){
 
-int tmp;
+int pos;
 
-
-
-    if (livros->nro_elem >= X){
-        tmp = 777;}else{
-
-    int i, pos;
-
-for(i=1; livros->A[i].id>0; i++ ){
-
-}
-
-
-
-    for (pos = livros->nro_elem; (pos > 0) && (livros->A[pos-1].id > i); pos--)
-    {
-      
-        livros->A[pos] = livros->A[pos-1];
-    }
-  
-livros->A[pos].id = i;
-livros->nro_elem++;
-
-    tmp = pos;
+pos = livros->nro_elem;
     
-        }
-if(tmp != 777){
+livros->A[pos].id = livros->count_id+1000;
+livros->nro_elem++;
+livros->count_id++;
+   
+    
+        
+if(livros->nro_elem <= X){
 printf("\nDigite o nome do titulo do Livro: ");
-    scanf("%s",livros->A[tmp].titulo);
+    scanf("%s",livros->A[pos].titulo);
 
 printf("Digite o nome do subtitulo do Livro: ");
-    scanf("%s",livros->A[tmp].subtitulo);
+    scanf("%s",livros->A[pos].subtitulo);
 
 printf("Digite o nome da autoria do Livro: ");
-    scanf("%s",livros->A[tmp].autoria);
+    scanf("%s",livros->A[pos].autoria);
 
 printf("Digite as informacoes da imprenta do Livro: ");
-    scanf("%s",livros->A[tmp].imprenta);
+    scanf("%s",livros->A[pos].imprenta);
 
 
     
@@ -74,7 +57,7 @@ printf("Digite as informacoes da imprenta do Livro: ");
 
 void mostra_todos(ACERVO *livros){
 int pos;
-for(pos=1; pos<livros->nro_elem; pos++){
+for(pos=0; pos<livros->nro_elem; pos++){
 
 printf("\nELEMENTO %d", livros->nro_elem);
 
@@ -92,7 +75,21 @@ printf("\nELEMENTO %d", livros->nro_elem);
 }
 }
 
+void mostra_livro(ACERVO *livros, int pos){
 
+
+
+    printf("\nDADOS DO LIVRO \n\n");
+    printf("ID: %d\n",livros->A[pos].id );
+    printf("TITULO: %s\n",livros->A[pos].titulo);
+    printf("SUBTITULO: %s\n",livros->A[pos].subtitulo );
+    printf("AUTORIA: %s\n",livros->A[pos].autoria );
+    printf("IMPRENTA: %s\n\n", livros->A[pos].imprenta );
+    
+    
+
+
+}
 //retorna a posição do elemento na LLS
 int busca_binaria(ACERVO *livros, int ch)
 {
@@ -114,4 +111,19 @@ int busca_binaria(ACERVO *livros, int ch)
     }
 
     return -1;
+}
+
+void deleta_livro(ACERVO *livros, int pos){
+
+        livros->A[pos].id = X + 1000;
+     int i; 
+
+for (i = pos; livros->A[i].id > livros->A[i++].id; i++){
+
+
+
+}
+livros->nro_elem--;
+livros->A[pos].id = -1;
+
 }

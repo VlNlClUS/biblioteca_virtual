@@ -18,7 +18,7 @@ typedef struct
 {
     LIVRO A[X];
     int nro_elem;
-	int prox;
+	int count_id;
 } ACERVO;
 
  ACERVO livros;
@@ -28,3 +28,5 @@ void cadastro_livro(ACERVO *livros);
 void inicalizar(ACERVO *livros);
 void mostra_todos(ACERVO *livros);
 int busca_binaria(ACERVO *livros, int ch);
+void mostra_livro(ACERVO *livros, int pos);
+void deleta_livro(ACERVO *livros, int pos);
