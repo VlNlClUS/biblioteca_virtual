@@ -1,8 +1,8 @@
-
+//VALOR RESPONSAVEL POR DELIMITAR A TAMANHO  DO VETOR DE STRUCTS 
 #define X 100
 
 
-
+//STRUCT QUE POSSUI INFORMACOES RELACIONADAS AO ITEM
 typedef struct
 {
   
@@ -14,6 +14,7 @@ typedef struct
 
 } LIVRO;
 
+//STRUCT RESPONSAVEL POR TORNAR A PRIMEIRA STRUCT UM VETOR E POR ORGANIZAR INFORMACOES GERAIS 
 typedef struct
 {
     LIVRO A[X];
@@ -23,7 +24,7 @@ typedef struct
 
  ACERVO livros;
 
-// int ordena_elemento(ACERVO *livros, LIVRO *titulo, LIVRO *subtitulo, LIVRO *autoria, LIVRO *imprenta);
+//PROTOTIPOS DAS FUNCOES 
 void cadastro_livro(ACERVO *livros);
 void inicalizar(ACERVO *livros);
 void mostra_todos(ACERVO *livros);
