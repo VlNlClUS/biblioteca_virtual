@@ -26,26 +26,26 @@ void cadastro_livro(ACERVO *livros){
         
             
     if(livros->nro_elem <= X){
-            printf("\nDigite o nome do titulo do Livro: ");
-                scanf("%s",livros->A[pos].titulo);
+        printf("\nDigite o nome do titulo do Livro: ");
+            scanf("%s",livros->A[pos].titulo);
 
-            printf("Digite o nome do subtitulo do Livro: ");
-                scanf("%s",livros->A[pos].subtitulo);
+        printf("Digite o nome do subtitulo do Livro: ");
+            scanf("%s",livros->A[pos].subtitulo);
 
-            printf("Digite o nome da autoria do Livro: ");
-                scanf("%s",livros->A[pos].autoria);
+        printf("Digite o nome da autoria do Livro: ");
+            scanf("%s",livros->A[pos].autoria);
 
-            printf("Digite as informacoes da imprenta do Livro: ");
-                scanf("%s",livros->A[pos].imprenta);
-                
-            printf("\n\nLIVRO CADASTRADO COM SUCESSO\n\n");
+        printf("Digite as informacoes da imprenta do Livro: ");
+            scanf("%s",livros->A[pos].imprenta);
+            
+        printf("\n\nLIVRO CADASTRADO COM SUCESSO\n\n");
 
-            getchar();
+        getchar();
 
-        }else{
-            printf("\n\nALGO DEU ERRADO :(\n\n");
-            getchar();
-        }
+    }else{
+        printf("\n\nALGO DEU ERRADO :(\n\n");
+        getchar();
+    }
 }
 
 
@@ -66,9 +66,6 @@ void mostra_todos(ACERVO *livros){
 }
 //FUNCAO PARA VER ITEM ESPECIFICO
 void mostra_livro(ACERVO *livros, int pos){
-
-
-
     printf("\nDADOS DO LIVRO \n\n");
     printf("ID: %d\n",livros->A[pos].id );
     printf("TITULO: %s\n",livros->A[pos].titulo);
@@ -101,9 +98,8 @@ int busca_binaria(ACERVO *livros, int ch)
     return -1;
 }
 
-//INSERE ITEM NA ULTIMA POSICAO PARA SOBREESCREVELO POSTERIORMENTE
+//INSERE ITEM NA ULTIMA POSICAO PARA SOBRESCREVELO POSTERIORMENTE
 void deleta_livro(ACERVO *livros, int pos){
-
      int i; 
 
         for (i = pos; i < livros->nro_elem; i++){
@@ -112,9 +108,6 @@ void deleta_livro(ACERVO *livros, int pos){
 
         }
 
-
     livros->nro_elem--;
-
-
 }
 
