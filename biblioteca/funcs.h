@@ -30,4 +30,5 @@
 	void mostra_todos(ACERVO *livros);
 	int busca_binaria(ACERVO *livros, int ch);
 	void mostra_livro(ACERVO *livros, int pos);
-	void deleta_livro(ACERVO *livros, int pos);
+	int deleta_livro(ACERVO *livros);
+	int busca_sequencial(ACERVO *livros, char *busc);
