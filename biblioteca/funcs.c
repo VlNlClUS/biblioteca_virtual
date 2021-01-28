@@ -5,7 +5,7 @@
 #include <string.h>
 #include<stdbool.h> 
 
-//teste
+//ok
 //ATRIBUI UM VALOR PARA O PRIMEIRO ELEMENTO PARA QUE O MESMO NAO POSSUA LIXO NA MEMORIA 
 void inicalizar(ACERVO *livros){
     livros->nro_elem= 0;
